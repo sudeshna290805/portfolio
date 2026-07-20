@@ -1330,12 +1330,13 @@ body {
     }
 
     .hero-title {
-        font-size: 2.1rem;
+        font-size: 1.7rem;
+        word-break: break-word;
     }
 
     .contact-main-title {
-        font-size: 2.3rem;
-        margin-bottom: 20px;
+        font-size: 2.0rem;
+        margin-bottom: 12px;
     }
 
     .section-header h2 {
@@ -1358,5 +1359,35 @@ body {
         flex-direction: column;
         text-align: center;
         gap: 8px;
+    }
+
+    /* Reduce card padding on mobile to add layout room */
+    .hero-card,
+    .about-card,
+    .contact-links-card,
+    .contact-callout-card,
+    .testimonial-card {
+        padding: 20px !important;
+    }
+
+    /* Stack Header Contact Elements */
+    .contact-links-card>div:first-child {
+        flex-direction: column !important;
+        align-items: flex-start !important;
+        gap: 16px !important;
+    }
+
+    /* Stack Contact Items to prevent value clip */
+    .c-link {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 6px;
+    }
+
+    .c-val {
+        align-self: flex-start;
+        word-break: break-all;
+        width: 100%;
+        text-align: left;
     }
 }
